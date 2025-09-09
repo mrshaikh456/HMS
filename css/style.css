@@ -1,0 +1,333 @@
+/* ------------------
+    Global Styles
+------------------- */
+:root {
+  --primary: #005a8d; /* A slightly darker blue */
+  --teal: #004d66;
+  --accent: #ffd700;
+  --footer: #003344;
+  --light: #f1f5f9; /* A softer light grey */
+  --text: #4a4a4a; /* Darker, more readable text */
+  --bs-font-sans-serif: "Poppins", sans-serif; /* Set Poppins as the primary font */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  line-height: 1.6;
+  color: var(--text);
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* ------------------
+    Header
+------------------- */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .company-name {
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+
+.company-tagline {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+/* ------------------
+    Navigation
+------------------- */
+nav.navbar {
+  background: var(--teal);
+}
+
+nav.navbar.sticky-top {
+  z-index: 1030;
+}
+
+nav.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 10px 12px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav.navbar .nav-link:hover,
+nav.navbar .dropdown-item:hover {
+  color: var(--accent) !important;
+  transform: translateY(-1px);
+}
+
+.navbar .dropdown-menu {
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+.navbar .dropdown-item {
+  color: #fff;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------
+    Page Banner
+------------------- */
+.page-banner {
+  background: var(--primary);
+  color: #fff; /* Ensures all text inside is white by default */
+}
+
+.page-banner h1,
+.page-banner a {
+  color: #fff !important; /* Forces color to be white, overriding global rules */
+}
+
+/* ------------------
+    Hero Carousel
+------------------- */
+#heroCarousel .carousel-item img {
+  object-fit: cover;
+  height: 50vh;
+}
+
+@media (min-width: 992px) {
+  #heroCarousel .carousel-item img {
+    height: 70vh;
+  }
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  /* Lighter overlay */
+  padding: 24px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  bottom: 20%;
+  /* Adjust position */
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* ------------------
+    Sections
+------------------- */
+.section {
+  padding: 80px 0;
+}
+
+.section.alt {
+  background: var(--light);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  color: var(--primary);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ------------------
+    Service Boxes (New)
+------------------- */
+.service-box {
+  background: #fff;
+  padding: 40px 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensures all boxes are the same height */
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-box i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.service-box h4 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ------------------
+    Buttons
+------------------- */
+.btn-custom {
+  background: var(--primary);
+  color: #fff !important;
+  padding: 12px 28px;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid var(--primary);
+}
+
+.btn-custom:hover {
+  background: transparent;
+  color: var(--primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom-hero {
+  background: var(--accent);
+  color: var(--primary) !important;
+  padding: 14px 32px;
+  border-radius: 50px; /* Pill shape */
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.btn-custom-hero:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------
+    Footer
+------------------- */
+footer {
+  background: var(--footer);
+  color: white;
+  padding: 40px 16px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------
+    Other Sections
+------------------- */
+
+.icon-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.icon-box h5 {
+    font-weight: 600;
+}
+
+.project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.contact-info-card {
+    background: var(--light);
+}
+
+.bg-light-blue {
+    background-color: #e3f2fd; /* A light, soft blue */
+}
+
+/* For contact page map */
+.map-container {
+    height: 450px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
